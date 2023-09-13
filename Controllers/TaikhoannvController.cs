@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApplication1.Controllers
 {
@@ -30,6 +31,7 @@ namespace WebApplication1.Controllers
             return tk == null ? NotFound() : Ok(tk);
         }
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Insert(ViewModels.VM_Taikhoannv taikhoannv)
         {
             await _tkRepos.Add(taikhoannv);

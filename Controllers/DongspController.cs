@@ -46,8 +46,8 @@ namespace WebApplication1.Controllers
             var dsp = await _dongspRepos.GetById(dongsp.Madong);
             if (dsp == null)
                 return NotFound();
-            await _dongspRepos.Update(dsp);
-            return Ok(dsp);
+            await _dongspRepos.Update(dongsp);
+            return Ok(dongsp);
         }
         [HttpPatch]
         public async Task<IActionResult> Update(VM_Dongsp dongsp)
@@ -55,8 +55,8 @@ namespace WebApplication1.Controllers
             var dsp = await _dongspRepos.GetById(dongsp.Madong);
             if (dsp == null)
                 return NotFound();
-            await _dongspRepos.Update(dsp);
-            return Ok(dsp);
+            await _dongspRepos.Update(dongsp);
+            return Ok(dongsp);
         }
         [HttpDelete]
         public async Task<IActionResult> Delete(decimal id)

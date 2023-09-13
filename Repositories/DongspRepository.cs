@@ -44,8 +44,15 @@ namespace WebApplication1.Repositories
         {
             var dsp = _context.Dongsps.SingleOrDefault(e => e.Madong == dongsp.Madong);
             dsp.Tendong = dongsp.Tendong;
+            dsp.Loai = dongsp.Loai;
             _context.Dongsps.Update(dsp);
             await _context.SaveChangesAsync();
         }
+
+        //public async Task UpdatePatch(VM_Dongsp dongsp)
+        //{
+        //    var dsp = _context.Dongsps.SingleOrDefault(e=>e.Madong==dongsp.Madong);
+        //    dsp
+        //}
     }
 }

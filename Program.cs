@@ -25,6 +25,9 @@ builder.Services.AddScoped<ITaikhoannvRepository,TaikhoannvRepository>();
 builder.Services.AddScoped<IKhachangRepository,Khachhangrepository>();
 builder.Services.AddScoped<IHoadonRepository, HoadonRepository>();
 
+builder.Services.AddAuthentication();
+//var serect
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -37,6 +40,8 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
