@@ -9,6 +9,6 @@ namespace WebApplication1.Interfaces
         public Task Add(VM_Dongsp dongsp);
         public Task Delete(decimal id);
         public Task Update(VM_Dongsp dongsp);
-        public Task UpdatePatch(VM_Dongsp dongsp);
+
     }
 }

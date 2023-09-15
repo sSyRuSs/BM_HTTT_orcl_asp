@@ -53,8 +53,8 @@ namespace WebApplication1.Controllers
             var nv = await _nvRepos.GetById(nhanvien.Manv);
             if(nv == null)
                 return NotFound();
-            await _nvRepos.Update(nv);
-            return Ok(nv);
+            await _nvRepos.Update(nhanvien);
+            return Ok(nhanvien);
         }
         [HttpDelete]
         public async Task<IActionResult> Delete(decimal id)

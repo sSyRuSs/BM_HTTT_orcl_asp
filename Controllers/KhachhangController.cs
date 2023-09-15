@@ -53,8 +53,8 @@ namespace WebApplication1.Controllers{
             var kh = await _khRepos.GetById(khachhang.Makh);
             if (kh == null)
                 return NotFound();
-            await _khRepos.Update(kh);
-            return Ok(kh);
+            await _khRepos.Update(khachhang);
+            return Ok(khachhang);
         }
         [HttpDelete]
         public async Task<IActionResult> Delete(decimal id)

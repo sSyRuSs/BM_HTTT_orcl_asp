@@ -54,8 +54,8 @@ namespace WebApplication1.Controllers
             var hd = await _hdRepos.GetById(hoadon.Mahd);
             if (hd == null)
                 return NotFound();
-            await _hdRepos.Update(hd);
-            return Ok(hd);
+            await _hdRepos.Update(hoadon);
+            return Ok(hoadon);
         }
         [HttpDelete]
         public async Task<IActionResult> Delete(decimal id)

@@ -43,8 +43,8 @@ namespace WebApplication1.Controllers
             var tk = await _tkRepos.GetById(taikhoannv.Manv);
             if (tk == null)
                 return NotFound();
-            await _tkRepos.Update(tk);
-            return Ok(tk);
+            await _tkRepos.Update(taikhoannv);
+            return Ok(taikhoannv);
         }
         [HttpDelete]
         public async Task<IActionResult> Delete(decimal id)

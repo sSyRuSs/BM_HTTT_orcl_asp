@@ -49,13 +49,13 @@ namespace WebApplication1.Controllers
             return Ok(dsp);
         }
         [HttpPatch]
-        public async Task<IActionResult> Update(ViewModels.VM_Sanpham dongsp)
+        public async Task<IActionResult> Update(ViewModels.VM_Sanpham sanpham)
         {
-            var dsp = await _sanphamRepos.GetById(dongsp.Masp);
+            var dsp = await _sanphamRepos.GetById(sanpham.Masp);
             if (dsp == null)
                 return NotFound();
-            await _sanphamRepos.Update(dsp);
-            return Ok(dsp);
+            await _sanphamRepos.Update(sanpham);
+            return Ok(sanpham);
         }
         [HttpDelete]
         public async Task<IActionResult> Delete(decimal id)

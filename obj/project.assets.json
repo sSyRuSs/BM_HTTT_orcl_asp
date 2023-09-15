@@ -2063,11 +2063,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Long\\ORC\\final3\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Long\\ORC\\final3\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\Long\\ORC\\final3\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "C:\\Long\\ORC\\final3\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Long\\ORC\\final3\\WebApplication1\\obj\\",
+      "outputPath": "C:\\Long\\ORC\\final3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
