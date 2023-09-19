@@ -37,18 +37,18 @@ namespace WebApplication1.Repositories
         }
         public async Task Delete(decimal id)
         {
-            var tknv = _context.Taikhoannvs.SingleOrDefault(e=>e.Manv == id);
+            var tknv = _context.Taikhoannvs.SingleOrDefault(e => e.Manv == id);
             _context.Taikhoannvs.Remove(tknv);
             await _context.SaveChangesAsync();
         }
         public async Task Update(ViewModels.VM_Taikhoannv taikhoannv)
         {
-            var tknv = _context.Taikhoannvs.SingleOrDefault(e => e.Manv== taikhoannv.Manv);
+            var tknv = _context.Taikhoannvs.SingleOrDefault(e => e.Manv == taikhoannv.Manv);
             tknv.Matkhau = taikhoannv.Matkhau;
             _context.Taikhoannvs.Update(tknv);
             await _context.SaveChangesAsync();
-
-
         }
+
+        
     }
 }

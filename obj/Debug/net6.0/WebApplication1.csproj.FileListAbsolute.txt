@@ -124,3 +124,15 @@ C:\Long\ORC\final3\obj\Debug\net6.0\scopedcss\bundle\WebApplication1.styles.css
 C:\Long\ORC\final3\obj\Debug\net6.0\WebApplication1.csproj.CopyComplete
 C:\Long\ORC\final3\obj\Debug\net6.0\WebApplication1.genruntimeconfig.cache
 C:\Long\ORC\final3\obj\Debug\net6.0\ref\WebApplication1.dll
+C:\Long\ORC\final3\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Long\ORC\final3\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Long\ORC\final3\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Long\ORC\final3\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Long\ORC\final3\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Long\ORC\final3\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Long\ORC\final3\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Long\ORC\final3\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Long\ORC\final3\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Long\ORC\final3\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Long\ORC\final3\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Long\ORC\final3\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

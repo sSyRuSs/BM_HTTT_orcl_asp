@@ -5,6 +5,8 @@ using WebApplication1.Models;
 using ExceptionHandling.Middlewares;
 using WebApplication1.Interfaces;
 using WebApplication1.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,38 @@ builder.Services.AddScoped<IHoadonRepository, HoadonRepository>();
 
 builder.Services.AddAuthentication();
 //var serect
+var KEY_COOKIE_AUTH =
+builder.Configuration["KEY_COOKIE_AUTH"];
+builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer("Bearer", options =>
+    {
+        options.SaveToken = true;
+        options.RequireHttpsMetadata = false;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidAudience = builder.Configuration["JWT:ValidAudience"],
+            ValidIssuer = builder.Configuration["JWT:ValidIssuer"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Secret"]))
+        };
+
+        options.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                context.Token = context.Request.Cookies[KEY_COOKIE_AUTH];
+                return Task.CompletedTask;
+            }
+        };
+
+
+    });
 
 var app = builder.Build();
 
