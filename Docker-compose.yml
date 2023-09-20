@@ -1,0 +1,12 @@
+version: "3.2"
+
+services: 
+  final3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # volume: 
+    #   - ./src
+    container_name: dotnet WebApplication1
+    port:
+      - "5021:80"

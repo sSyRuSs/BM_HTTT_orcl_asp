@@ -27,6 +27,15 @@ builder.Services.AddScoped<ITaikhoannvRepository,TaikhoannvRepository>();
 builder.Services.AddScoped<IKhachangRepository,Khachhangrepository>();
 builder.Services.AddScoped<IHoadonRepository, HoadonRepository>();
 
+builder.Services.AddCors(options =>
+   {
+       options.AddDefaultPolicy(builder =>
+           builder.SetIsOriginAllowed(_ => true)
+           .AllowAnyMethod()
+           .AllowAnyHeader()
+           .AllowCredentials());
+   });
+
 builder.Services.AddAuthentication();
 //var serect
 var KEY_COOKIE_AUTH =
