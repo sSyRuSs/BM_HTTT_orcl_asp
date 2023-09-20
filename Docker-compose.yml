@@ -8,5 +8,5 @@ services:
     # volume: 
     #   - ./src
     container_name: dotnet WebApplication1
-    port:
-      - "5021:80"
+    ports:
+      - "7109:80"
